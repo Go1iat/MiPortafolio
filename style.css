@@ -1,0 +1,82 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Azul muy oscuro */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Encabezado y Hero */
+header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 2rem 10%;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.logo { font-weight: bold; color: #38bdf8; }
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; font-size: 0.9rem; }
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: #f1f5f9; }
+.hero p { color: #94a3b8; font-size: 1.2rem; }
+
+/* Sección de Proyectos */
+main { padding: 4rem 10%; }
+
+h2 { text-align: center; margin-bottom: 3rem; font-size: 2rem; }
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjetas de Proyecto */
+.card {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+}
+
+.icon-code { font-size: 3rem; margin-bottom: 1rem; }
+
+.tags { margin: 1.5rem 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.tags span {
+    background: #334155;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: #0f172a;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
