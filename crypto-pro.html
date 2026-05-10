@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker | Leonel Goliat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-app">
+        <div class="card-app">
+            <h1 class="titulo-app">🚀 Crypto Tracker</h1>
+            <p class="subtitulo">Precios en tiempo real (CoinGecko)</p>
+
+            <input type="number" id="monto" placeholder="Cantidad (ej: 0.5)" step="any">
+            
+             <select id="crypto">
+                <option value="bitcoin">₿ Bitcoin (BTC)</option>
+                <option value="ethereum">Ξ Ethereum (ETH)</option>
+                <option value="solana">◎ Solana (SOL)</option>
+                <option value="binancecoin">🔶 BNB (Binance)</option>
+                <option value="cardano">₳ Cardano (ADA)</option>
+                <option value="ripple">✕ XRP (Ripple)</option>
+                <option value="dogecoin">Ð Dogecoin (DOGE)</option>
+                <option value="polkadot">● Polkadot (DOT)</option>
+            </select>
+
+            <button class="btn-primary" onclick="consultarCrypto()">CALCULAR VALOR</button>
+
+            <div id="resultado" class="resultado-v"></div>
+
+            <a href="index.html" class="back-link">← Volver al Portafolio</a>
+        </div>
+    </div>
+    <script src="crypto.js"></script>
+</body>
+</html>
