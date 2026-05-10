@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Panhispánico | Leonel Goliat</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para que esta página se vea como una App */
+        .app-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #1e293b;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: white;
+            font-size: 1rem;
+        }
+        .resultado-grande {
+            font-size: 2rem;
+            color: #34d399;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <h1 style="color: #38bdf8;">💱 Conversor Pro</h1>
+        <p style="color: #94a3b8;">Tasas en tiempo real para Iberoamérica</p>
+
+        <input type="number" id="monto" placeholder="Ingresa cantidad..." autofocus>
+
+        <select id="moneda">
+    <optgroup label="Norte y Centroamérica">
+        <option value="MXN">🇲🇽 México (Peso)</option>
+        <option value="GTQ">🇬🇹 Guatemala (Quetzal)</option>
+        <option value="HNL">🇭🇳 Honduras (Lempira)</option>
+        <option value="NIO">🇳🇮 Nicaragua (Córdoba)</option>
+        <option value="CRC">🇨🇷 Costa Rica (Colón)</option>
+        <option value="BZD">🇧🇿 Belice (Dólar Beliceño)</option>
+        <option value="USD_FIXED">🇵🇦 Panamá (Balboa)</option>
+        <option value="USD_FIXED">🇸🇻 El Salvador (Dólar)</option>
+    </optgroup>
+    
+    <optgroup label="Sudamérica">
+        <option value="ARS">🇦🇷 Argentina (Peso)</option>
+        <option value="BOB">🇧🇴 Bolivia (Boliviano)</option>
+        <option value="BRL">🇧🇷 Brasil (Real)</option>
+        <option value="CLP">🇨🇱 Chile (Peso)</option>
+        <option value="COP">🇨🇴 Colombia (Peso)</option>
+        <option value="USD_FIXED">🇪🇨 Ecuador (Dólar)</option>
+        <option value="GYD">🇬🇾 Guyana (Dólar)</option>
+        <option value="PYG">🇵🇾 Paraguay (Guaraní)</option>
+        <option value="PEN">🇵🇪 Perú (Sol)</option>
+        <option value="SRD">🇸🇷 Surinam (Dólar)</option>
+        <option value="UYU">🇺🇾 Uruguay (Peso)</option>
+        <option value="VES">🇻🇪 Venezuela (Bolívar)</option>
+    </optgroup>
+
+    <optgroup label="El Caribe">
+        <option value="CUP">🇨🇺 Cuba (Peso)</option>
+        <option value="DOP">🇩🇴 Rep. Dominicana (Peso)</option>
+        <option value="HTG">🇭🇹 Haití (Gourde)</option>
+        <option value="JMD">🇯🇲 Jamaica (Dólar)</option>
+        <option value="TTD">🇹🇹 Trinidad y Tobago (Dólar)</option>
+        <option value="BBD">🇧🇧 Barbados (Dólar)</option>
+        <option value="XCD">🇦🇬 Antigua y Barbuda (Dólar del Caribe Or.)</option>
+        <option value="XCD">🇩🇲 Dominica (Dólar del Caribe Or.)</option>
+        <option value="XCD">🇬🇩 Granada (Dólar del Caribe Or.)</option>
+        <option value="XCD">🇰🇳 San Cristóbal y Nieves (Dólar del Caribe Or.)</option>
+        <option value="XCD">VC">🇻🇨 San Vicente y las Granadinas (Dólar C.O.)</option>
+        <option value="XCD">🇱🇨 Santa Lucía (Dólar C.O.)</option>
+        <option value="BSD">🇧🇸 Bahamas (Dólar)</option>
+    </optgroup>
+</select>
+
+        <button onclick="convertirMoneda()" class="btn" style="width: 100%; padding: 15px; margin-top: 10px;">
+            CALCULAR EQUIVALENCIA
+        </button>
+
+        <div id="resultado" class="resultado-grande"></div>
+        
+        <div style="margin-top: 30px;">
+            <a href="index.html" style="color: #38bdf8; text-decoration: none;">← Volver al Portafolio</a>
+        </div>
+    </div>
+
+    <script src="conversor.js"></script>
+</body>
+</html>
